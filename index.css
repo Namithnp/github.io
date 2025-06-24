@@ -252,21 +252,82 @@ nav a:hover {
   letter-spacing: 0.2px;
 }
 
+/*MOBILE VIEWPORT*/
+
 
 @media (max-width: 600px) {
+  .card {
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+  }
+
+  .card .card-content {
+    transform: rotate(-45deg);
+    font-size: 0.7rem;
+  }
+
+  .container {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .dropdown-content {
+    position: relative;
+    background: #fff;
+    box-shadow: none;
+  }
+
+  .grid {
+    grid-template-columns: repeat(7, 60px); /* Smaller columns for diamonds */
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+
+  .hamburger {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    right: 20px;
+    z-index: 100;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 99;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
   .tagline {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+/*.nav-menu {
+  display: flex;
+  gap: 1rem;
 }
